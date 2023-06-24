@@ -20,7 +20,7 @@ int lcs(char * X, char * Y, int m, int n){
          else if (X[i - 1] == Y[j - 1]) {
             L[i][j] = L[i - 1][j - 1] + 1;
          } else
-
+            L[i][j] = max(L[i - 1][j], L[i][j - 1]);
       }
    }
 // Print the LCS matrix
